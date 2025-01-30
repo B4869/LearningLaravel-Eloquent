@@ -13,12 +13,6 @@ class OrdersController extends Controller
     public function index()
     {
         //
-        $orders = Orders::with('orderDetails')->get();
-
-        return response()->json([
-            'status' => 'success',
-            'data' => $orders
-        ]);
     }
 
     /**

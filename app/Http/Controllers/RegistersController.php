@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Registers;
+use App\Models\Students;
 use Illuminate\Http\Request;
 
 class RegistersController extends Controller
@@ -13,6 +14,9 @@ class RegistersController extends Controller
     public function index()
     {
         //
+        $reg = Students::with('registers.course.teacher')->get();
+
+        return response()->json($reg);
     }
 
     /**

@@ -13,6 +13,9 @@ class ProductsController extends Controller
     public function index()
     {
         //
+        $products = Products::with('orderDetails.order.customer')->get();
+
+        return response()->json($products);
     }
 
     /**

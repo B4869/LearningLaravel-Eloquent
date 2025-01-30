@@ -4,7 +4,6 @@ use App\Http\Controllers\BookingsController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegistersController;
-use App\Http\Controllers\OrdersController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -28,8 +27,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/booking', [OrdersController::class, 'index'])->name('booking');
-Route::get('/a', [BookingsController::class, 'index'])->name('product');
-Route::get('/register', [RegistersController::class, 'index'])->name('register');
+Route::get('/booking', [BookingsController::class, 'index'])->name('booking');
+Route::get('/booking/visual', [BookingsController::class, 'visual'])->name('booking.visual');
+Route::get('/product', [ProductsController::class, 'index'])->name('product');
+Route::get('/reg', [RegistersController::class, 'index'])->name('reg');
 
 require __DIR__.'/auth.php';
