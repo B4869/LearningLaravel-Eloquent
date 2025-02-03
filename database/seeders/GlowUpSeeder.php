@@ -25,19 +25,19 @@ class GlowUpSeeder extends Seeder
     public function run(): void
     {
         //
-        Products::factory(30)->create();
-        ProdCustomers::factory(30)->create();
-        Orders::factory(30)->create();
-        OrderDetails::factory(30)->create();
+        // Products::factory(30)->create();
+        // ProdCustomers::factory(30)->create();
+        // Orders::factory(30)->create();
+        // OrderDetails::factory(30)->create();
 
-        Teachers::factory(30)->create();
-        Students::factory(30)->create();
-        Courses::factory(30)->create();
-        Registers::factory(30)->create();
+        // Teachers::factory(30)->create();
+        // Students::factory(30)->create();
+        // Courses::factory(30)->create();
+        // Registers::factory(30)->create();
 
-        BookingCustomers::factory(100)->create();
-        RoomTypes::factory(5)->create();
-        Rooms::factory(30)->create();
-        Bookings::factory(150)->create();
+        // BookingCustomers::factory(100)->create();
+        // RoomTypes::factory(5)->create();
+        // Rooms::factory(30)->create();
+        Bookings::factory(300)->create();
     }
 }

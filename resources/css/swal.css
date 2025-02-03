@@ -1,0 +1,42 @@
+/* ปรับแต่ง container */
+.custom-swal-container {
+    font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ Kanit หรือฟอนต์อื่นที่คุณชอบ */
+}
+
+/* ปรับแต่ง popup */
+.custom-swal-popup {
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 30%;
+}
+
+/* ปรับแต่ง title */
+.custom-swal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748; /* สีเทาเข้ม */
+}
+
+/* ปรับแต่ง text */
+.custom-swal-text {
+    font-size: 1rem;
+    color: #4a5568; /* สีเทา */
+}
+
+/* ปรับแต่งปุ่ม Confirm */
+.custom-swal-confirm-button {
+    background-color: #3182ce; /* สีน้ำเงิน */
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ปรับแต่งปุ่ม Cancel */
+.custom-swal-cancel-button {
+    background-color: #e53e3e; /* สีแดง */
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+}

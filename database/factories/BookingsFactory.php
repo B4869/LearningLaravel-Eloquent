@@ -17,12 +17,17 @@ class BookingsFactory extends Factory
      */
     public function definition(): array
     {
+        $checkInDate = $this->faker->dateTimeBetween('-3 years', 'now');
+        $daysToAdd = $this->faker->numberBetween(1, 8);
+        $checkOutDate = clone $checkInDate;
+        $checkOutDate->modify("+$daysToAdd days");
+
         return [
             //
             'room_id' => $this->faker->numberBetween(1, 30),
             'customer_id' => $this->faker->numberBetween(1, 100),
-            'check_in_date' => $this->faker->dateTimeBetween('-1 years', 'now'),
-            'check_out_date' => $this->faker->dateTimeBetween('now', '+1 years'),
+            'check_in_date' => $checkInDate,
+            'check_out_date' => $checkOutDate,
             'total_amount' => $this->faker->randomFloat(2, 1, 1000),
         ];
     }
